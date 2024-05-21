@@ -1,8 +1,8 @@
 # LazyLoadComponent
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.9.
-# LazyLoadComponent
 
+This project was created to test the usage of the Transloco library, along with features such as @defer, @placeholder, @loading, @error, ... 
 
 ## Development server
 

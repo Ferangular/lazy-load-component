@@ -6,6 +6,7 @@ import { ProjectsSkeletonComponent } from "../components/projects-skeleton/proje
 import { AchievementsSkeletonComponent } from "../components/achievements-skeleton/achievements-skeleton.component";
 import { NavComponent } from '../nav/nav.component';
 import {ContactComponent} from "../footer/contact.component";
+import {TranslocoDirective} from "@jsverse/transloco";
 
 
 @Component({
@@ -15,6 +16,6 @@ import {ContactComponent} from "../footer/contact.component";
     styleUrl: './user-profile.component.css',
   imports: [DetailsComponent, NavComponent,
     ProjectsComponent, AchievementsComponent,
-    ProjectsSkeletonComponent, AchievementsSkeletonComponent, ContactComponent]
+    ProjectsSkeletonComponent, AchievementsSkeletonComponent, ContactComponent, TranslocoDirective]
 })
 export class UserProfileComponent { }

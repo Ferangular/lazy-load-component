@@ -5,9 +5,7 @@
 </div>
 
 <!-- For 3 scenarios, when you want to use 'span' element as trigger -->
-<!-- |
-                    |
-                    V -->
+
 <!-- <span (inViewport)="onViewport()"></span>
 <div class="wrapper" style="margin-top: 0;">
     <p>
@@ -47,9 +45,15 @@
     <ng-template #contentSlot />
 
     <ng-container *ngIf="depsState$ | async as state">
-        <ng-template *ngIf="state == 'NOT_STARTED'" [ngTemplateOutlet]="placeholderTpl"></ng-template>
-        <ng-template *ngIf="state == 'IN_PROGRESS'" [ngTemplateOutlet]="loadingTpl"></ng-template>
-        <ng-template *ngIf="state == 'FAILED'" [ngTemplateOutlet]="errorTpl"></ng-template>
+      @if(state == 'NOT_STARTED'){
+        <ng-template  [ngTemplateOutlet]="placeholderTpl"></ng-template>
+      }
+      @if(state == 'IN_PROGRESS'){
+        <ng-template  [ngTemplateOutlet]="loadingTpl"></ng-template>
+      }
+      @if(state == 'FAILED'){
+        <ng-template  [ngTemplateOutlet]="errorTpl"></ng-template>
+      }
     </ng-container>
 
     <ng-template #placeholderTpl>

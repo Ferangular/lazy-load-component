@@ -1,0 +1,116 @@
+<app-nav />
+
+<div class="wrapper">
+	<app-details id="details" />
+</div>
+
+<!-- Sample #2: Using trigger element other than placeholder -->
+<!-- <span #triggerEl></span>
+<div class="wrapper" style="margin-top: 0;">
+    <p>
+        Throughout this virtual odyssey, Alex collaborated with cross-functional teams, adapting to the unique demands
+        of each industry. From startups to established corporations, Alex's ability to translate complex requirements
+        into elegant front-end solutions earned accolades, establishing a reputation as a sought-after virtual front-end
+        developer.
+    </p>
+    <p>
+        As the digital landscape continues to evolve, Alex remains at the forefront, embracing new challenges and
+        pushing the boundaries of what's possible in the world of web development. With a portfolio that reads like a
+        novel of innovation, Alex's journey as a virtual front-end developer continues, leaving an indelible mark on the
+        ever-expanding canvas of the digital frontier.
+    </p>
+    <p>
+        Throughout this virtual odyssey, Alex collaborated with cross-functional teams, adapting to the unique demands
+        of each industry. From startups to established corporations, Alex's ability to translate complex requirements
+        into elegant front-end solutions earned accolades, establishing a reputation as a sought-after virtual front-end
+        developer.
+    </p>
+    <p>
+        As the digital landscape continues to evolve, Alex remains at the forefront, embracing new challenges and
+        pushing the boundaries of what's possible in the world of web development. With a portfolio that reads like a
+        novel of innovation, Alex's journey as a virtual front-end developer continues, leaving an indelible mark on the
+        ever-expanding canvas of the digital frontier.
+    </p>
+    <p>In the fast-paced world of web development, Alex Morrison, affectionately known as "Blaze" in the coding circles,
+        stands out as a beacon of innovation and expertise. With a surname reminiscent of the rhythmic hum of code
+        execution and a nickname that captures the fiery passion for pushing boundaries, Alex has become a respected
+        figure in the virtual landscapes. Blaze's journey through diverse industries has been marked by an unwavering
+        commitment to crafting seamless and intuitive user interfaces, leaving an indelible mark on each project
+        undertaken.
+    </p>
+</div> -->
+
+<!-- Sample #1: Using placeholder as trigger element -->
+<div class="wrapper wrapper-xl">
+	@defer (on viewport) {
+		<app-projects  />
+	} @placeholder () {
+		<p style="text-align: center;">Projects will be rendered here...</p>
+	} @loading (after 1s; minimum 3s) {
+        <app-projects-skeleton />
+	} @error {
+		<p>Oops, something went wrong!</p>
+	}
+</div>
+
+<!-- Sample #2: Using trigger element other than placeholder -->
+<!-- <div class="wrapper wrapper-xl">
+	@defer (on viewport(triggerEl)) {
+		<app-projects  />
+	} @placeholder () {
+		<p style="text-align: center;">Projects will be rendered here...</p>
+	} @loading (after 1s; minimum 3s) {
+        <app-projects-skeleton />
+	} @error {
+		<p>Oops, something went wrong!</p>
+	}
+</div> -->
+
+<!-- Sample #3: Loading more than one component together -->
+<!-- <div class="wrapper wrapper-xl">
+	@defer (on viewport) {
+		<app-projects  />
+		<app-achievements />
+	} @placeholder () {
+		<p style="text-align: center;">Projects and Achievements will be rendered here...</p>
+	} @loading (after 1s; minimum 3s) {
+		<h2>Projects</h2>
+        <app-projects-skeleton />
+
+        <h2>Achievements</h2>
+        <app-achievements-skeleton />
+	} @error {
+		<p>Oops, something went wrong!</p>
+	}
+</div> -->
+
+<!-- Sample #4: Loading more than one component separately -->
+<!-- <div class="wrapper wrapper-xl">
+	@defer (on viewport) {
+		<app-projects  />
+	} @placeholder () {
+		<p style="text-align: center;">Projects will be rendered here...</p>
+	} @loading (after 1s; minimum 3s) {
+        <h2>Projects</h2>
+        <app-projects-skeleton />
+	} @error {
+		<p>Oops, something went wrong!</p>
+	}
+
+	@defer (on viewport) {
+		<app-achievements />
+	} @placeholder () {
+		<p style="text-align: center;">Achievements will be rendered here...</p>
+	} @loading (after 1s; minimum 3s) {
+        <h2>Achievements</h2>
+        <app-achievements-skeleton />
+	} @error {
+		<p>Oops, something went wrong!</p>
+	}
+</div> -->
+
+<hr />
+
+<div class="wrapper">
+    <app-footer id="contact" />
+</div>

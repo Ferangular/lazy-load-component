@@ -1,0 +1,20 @@
+import { Component } from '@angular/core';
+import { DetailsComponent } from '../components/details/details.component';
+import { ProjectsComponent } from '../components/projects/projects.component';
+import { AchievementsComponent } from '../components/achievements/achievements.component';
+import { ProjectsSkeletonComponent } from "../components/projects-skeleton/projects-skeleton.component";
+import { AchievementsSkeletonComponent } from "../components/achievements-skeleton/achievements-skeleton.component";
+import { NavComponent } from '../nav/nav.component';
+import {ContactComponent} from "../footer/contact.component";
+
+
+@Component({
+    selector: 'app-user-profile',
+    standalone: true,
+    templateUrl: './user-profile.component.html',
+    styleUrl: './user-profile.component.css',
+  imports: [DetailsComponent, NavComponent,
+    ProjectsComponent, AchievementsComponent,
+    ProjectsSkeletonComponent, AchievementsSkeletonComponent, ContactComponent]
+})
+export class UserProfileComponent { }

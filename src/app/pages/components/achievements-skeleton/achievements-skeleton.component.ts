@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './achievements-skeleton.component.html',
-  styleUrl: './achievements-skeleton.component.css'
+  styleUrl: './achievements-skeleton.component.css',
 })
-export class AchievementsSkeletonComponent {
-
-}
+export class AchievementsSkeletonComponent {}

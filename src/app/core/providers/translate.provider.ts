@@ -1,7 +1,7 @@
 import { isDevMode, Provider } from '@angular/core';
 
 import { provideTransloco } from '@jsverse/transloco';
-import {TranslocoHttpLoader} from "./transloco-loader";
+import { TranslocoHttpLoader } from './transloco-loader';
 
 export function provideTranslateTransloco(): Provider {
   return provideTransloco({

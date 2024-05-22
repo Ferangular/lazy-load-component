@@ -1,7 +1,7 @@
 <app-nav />
 
 <div class="wrapper">
-    <app-details id="details" />
+  <app-details id="details" />
 </div>
 
 <!-- For 3 scenarios, when you want to use 'span' element as trigger -->
@@ -42,49 +42,49 @@
 </div> -->
 
 <div class="wrapper wrapper-xl">
-    <ng-template #contentSlot />
+  <ng-template #contentSlot />
 
-    <ng-container *ngIf="depsState$ | async as state">
-      @if(state == 'NOT_STARTED'){
-        <ng-template  [ngTemplateOutlet]="placeholderTpl"></ng-template>
-      }
-      @if(state == 'IN_PROGRESS'){
-        <ng-template  [ngTemplateOutlet]="loadingTpl"></ng-template>
-      }
-      @if(state == 'FAILED'){
-        <ng-template  [ngTemplateOutlet]="errorTpl"></ng-template>
-      }
-    </ng-container>
+  <ng-container *ngIf="depsState$ | async as state">
+    @if (state == "NOT_STARTED") {
+      <ng-template [ngTemplateOutlet]="placeholderTpl"></ng-template>
+    }
+    @if (state == "IN_PROGRESS") {
+      <ng-template [ngTemplateOutlet]="loadingTpl"></ng-template>
+    }
+    @if (state == "FAILED") {
+      <ng-template [ngTemplateOutlet]="errorTpl"></ng-template>
+    }
+  </ng-container>
 
-    <ng-template #placeholderTpl>
-        <!-- Remove '(inViewport)="onViewport()"' from 'p' below
+  <ng-template #placeholderTpl>
+    <!-- Remove '(inViewport)="onViewport()"' from 'p' below
             if the 'span' above is used as trigger element -->
-        <p (inViewport)="onViewport()" style="text-align: center;">
-            Projects will be rendered here...
+    <p (inViewport)="onViewport()" style="text-align: center">
+      Projects will be rendered here...
 
-            <!-- For Scenario 3 uncomment line below -->
-            <!-- Projects and Achievements will be rendered here... -->
-        </p>
-    </ng-template>
+      <!-- For Scenario 3 uncomment line below -->
+      <!-- Projects and Achievements will be rendered here... -->
+    </p>
+  </ng-template>
 
-    <ng-template #loadingTpl>
-        <app-projects-skeleton />
+  <ng-template #loadingTpl>
+    <app-projects-skeleton />
 
-         <!-- For Scenario 3 uncomment line below -->
-        <!-- <h2>Projects</h2>
+    <!-- For Scenario 3 uncomment line below -->
+    <!-- <h2>Projects</h2>
         <app-projects-skeleton />
 
         <h2>Achievements</h2>
         <app-achievements-skeleton /> -->
-    </ng-template>
+  </ng-template>
 
-    <ng-template #errorTpl>
-        <p>Oops, something went wrong!</p>
-    </ng-template>
+  <ng-template #errorTpl>
+    <p>Oops, something went wrong!</p>
+  </ng-template>
 </div>
 
 <hr />
 
 <div class="wrapper">
-    <app-footer id="contact" />
+  <app-footer id="contact" />
 </div>

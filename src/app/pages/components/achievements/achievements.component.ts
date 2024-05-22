@@ -8,7 +8,6 @@ import { achievements } from '../../../core/data/achievements';
   styleUrls: ['./achievements.component.css'],
 })
 export class AchievementsComponent implements OnInit {
-
   achievements = achievements;
 
   constructor() {}

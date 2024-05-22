@@ -11,9 +11,8 @@ describe('AchievementsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AchievementsComponent ]
-    })
-    .compileComponents();
+      declarations: [AchievementsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

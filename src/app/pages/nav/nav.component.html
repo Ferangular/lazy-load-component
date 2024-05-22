@@ -1,21 +1,28 @@
 <ng-container *transloco="let t; read: 'navbar'">
-<nav class="navbar">
-  <div class="brand">
-    <img src="./../assets/images/github-dark.jpg" alt="Logo">
-    Pepe
-  </div>
-  <div class="nav-links">
-    <a href="#details">{{t('home')}}</a>
-    <a href="#projects">{{t('Projects')}}</a>
-    <a href="#achievements">{{t('achievements')}}</a>
-    <a href="#contact">{{t('contact')}}</a>
-  </div>
-  <div class="settings">
-    <button type="button" title="Theme Toggler" class="theme-toggle"><i class="fas fa-adjust"></i></button>
-    <select #language class="language-switch mouse-over" title="Language Dropdown" (change)="setLanguage(language.value)">
-      <option value="es">ES</option>
-      <option value="en">EN</option>
-    </select>
-  </div>
-</nav>
+  <nav class="navbar">
+    <div class="brand">
+      <img src="./../assets/images/github-dark.jpg" alt="Logo" />
+      Pepe
+    </div>
+    <div class="nav-links">
+      <a href="#details">{{ t("home") }}</a>
+      <a href="#projects">{{ t("Projects") }}</a>
+      <a href="#achievements">{{ t("achievements") }}</a>
+      <a href="#contact">{{ t("contact") }}</a>
+    </div>
+    <div class="settings">
+      <button type="button" title="Theme Toggler" class="theme-toggle">
+        <i class="fas fa-adjust"></i>
+      </button>
+      <select
+        #language
+        class="language-switch mouse-over"
+        title="Language Dropdown"
+        (change)="setLanguage(language.value)"
+      >
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+  </nav>
 </ng-container>

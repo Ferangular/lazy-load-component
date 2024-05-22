@@ -8,10 +8,9 @@ describe('AchievementsSkeletonComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AchievementsSkeletonComponent]
-    })
-    .compileComponents();
-    
+      imports: [AchievementsSkeletonComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(AchievementsSkeletonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

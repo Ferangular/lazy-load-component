@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './projects-skeleton.component.html',
-  styleUrl: './projects-skeleton.component.css'
+  styleUrl: './projects-skeleton.component.css',
 })
 export class ProjectsSkeletonComponent {}

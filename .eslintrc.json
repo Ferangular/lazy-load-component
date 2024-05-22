@@ -18,6 +18,13 @@
         "no-console": "warn",
         "@angular-eslint/sort-lifecycle-methods": "error",
         "@angular-eslint/prefer-on-push-component-change-detection": "error",
+        "@angular-eslint/component-max-inline-declarations": [
+          "error",
+          {
+            "template": 25,
+            "styles": 10
+          }
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {

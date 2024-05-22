@@ -1,4 +1,4 @@
-import { Component, ViewChild, ViewContainerRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { DetailsComponent } from '../components/details/details.component';
 import { InViewportDirective } from '../../core/directives/in-viewport.directive';
 import { BehaviorSubject } from 'rxjs';
@@ -7,14 +7,11 @@ import { ProjectsSkeletonComponent } from '../components/projects-skeleton/proje
 import { AchievementsSkeletonComponent } from '../components/achievements-skeleton/achievements-skeleton.component';
 import { NavComponent } from '../nav/nav.component';
 import { ContactComponent } from '../footer/contact.component';
-
+// eslint-disable-next-line
 function loadDeps() {
-  return Promise.allSettled([
-    import('../components/projects/projects.component'),
-    import('../components/achievements/achievements.component'),
-  ]);
+  return Promise.allSettled([import('../components/projects/projects.component'), import('../components/achievements/achievements.component')]);
 }
-
+// eslint-disable-next-line
 function delay(timing: number) {
   return new Promise<void>((res) => {
     setTimeout(() => {
@@ -28,6 +25,7 @@ type DepsLoadingState = 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETE' | 'FAILED';
 @Component({
   selector: 'app-user-profile',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
   imports: [
@@ -60,7 +58,7 @@ export class UserProfileComponent {
 
         this.depsState$.next('COMPLETE');
       },
-      (err) => this.depsState$.next('FAILED'),
+      () => this.depsState$.next('FAILED'),
     );
   }
 

@@ -45,13 +45,13 @@
   <ng-template #contentSlot />
 
   <ng-container *ngIf="depsState$ | async as state">
-    @if (state == "NOT_STARTED") {
+    @if (state === 'NOT_STARTED') {
       <ng-template [ngTemplateOutlet]="placeholderTpl"></ng-template>
     }
-    @if (state == "IN_PROGRESS") {
+    @if (state === 'IN_PROGRESS') {
       <ng-template [ngTemplateOutlet]="loadingTpl"></ng-template>
     }
-    @if (state == "FAILED") {
+    @if (state === 'FAILED') {
       <ng-template [ngTemplateOutlet]="errorTpl"></ng-template>
     }
   </ng-container>

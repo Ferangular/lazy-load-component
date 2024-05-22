@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { DetailsComponent } from '../components/details/details.component';
 import { ProjectsComponent } from '../components/projects/projects.component';
 import { AchievementsComponent } from '../components/achievements/achievements.component';
@@ -11,6 +11,7 @@ import { TranslocoDirective } from '@jsverse/transloco';
 @Component({
   selector: 'app-user-profile',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.css',
   imports: [

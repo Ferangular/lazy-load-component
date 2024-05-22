@@ -1,12 +1,4 @@
-import {
-  AfterViewInit,
-  Directive,
-  ElementRef,
-  EventEmitter,
-  OnDestroy,
-  Output,
-  inject,
-} from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, EventEmitter, OnDestroy, Output, inject } from '@angular/core';
 /***
  * Usage:
  * <div *inViewport="inViewport"></div>
@@ -14,6 +6,7 @@ import {
  * Por ejemplo, podría ser útil para cargar contenido adicional cuando el usuario se desplaza hasta cierta parte de la página.
  */
 @Directive({
+  // eslint-disable-next-line
   selector: '[inViewport]',
   standalone: true,
 })

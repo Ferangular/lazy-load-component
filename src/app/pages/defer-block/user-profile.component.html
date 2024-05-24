@@ -28,17 +28,17 @@
   <!--</div>-->
 
   <!-- Sample #1: Using placeholder as trigger element -->
-  <!--<div class="wrapper wrapper-xl">-->
-  <!--	@defer (on viewport) {-->
-  <!--		<app-projects  />-->
-  <!--	} @placeholder () {-->
-  <!--		<p style="text-align: center;">Projects will be rendered here...</p>-->
-  <!--	} @loading (after 1s; minimum 3s) {-->
-  <!--        <app-projects-skeleton />-->
-  <!--	} @error {-->
-  <!--		<p>Oops, something went wrong!</p>-->
-  <!--	}-->
-  <!--</div>-->
+  <div class="wrapper wrapper-xl">
+    @defer (on viewport) {
+      <app-projects />
+    } @placeholder {
+      <p style="text-align: center">Projects will be rendered here...</p>
+    } @loading (after 1s; minimum 3s) {
+      <app-projects-skeleton />
+    } @error {
+      <p>Oops, something went wrong!</p>
+    }
+  </div>
 
   <!-- Sample #2: Using trigger element other than placeholder -->
   <!-- <div class="wrapper wrapper-xl">-->

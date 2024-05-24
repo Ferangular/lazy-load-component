@@ -6,8 +6,7 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  template: `<router-outlet />`,
 })
 export class AppComponent {
   title = 'Deferrable Views: The Past and Present';

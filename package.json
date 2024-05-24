@@ -36,7 +36,7 @@
     "@angular-eslint/eslint-plugin-template": "17.5.1",
     "@angular-eslint/schematics": "17.5.1",
     "@angular-eslint/template-parser": "17.5.1",
-    "@angular/cli": "^17.3.7",
+    "@angular/cli": "^18.0.1",
     "@angular/compiler-cli": "^17.3.9",
     "@happy-dom/jest-environment": "^14.10.1",
     "@types/jest": "^29.5.12",
